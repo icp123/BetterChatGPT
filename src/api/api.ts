@@ -1,5 +1,6 @@
 import { ShareGPTSubmitBodyInterface } from '@type/api';
 import { ConfigInterface, MessageInterface } from '@type/chat';
+import useStore from '@store/store';
 
 export const getChatCompletion = async (
   endpoint: string,
@@ -10,7 +11,9 @@ export const getChatCompletion = async (
   const headers: HeadersInit = {
     'Content-Type': 'application/json',
   };
-  if (apiKey) headers.Authorization = `Bearer ${apiKey}`;
+  // if (apiKey) headers.Authorization = `Bearer ${apiKey}`;
+  const authData = useStore.getState().authData;
+  console.log('%c [ authData ]-16', 'font-size:13px; background:pink; color:#bf2c9f;', authData)
 
   const response = await fetch(endpoint, {
     method: 'POST',
@@ -37,6 +40,14 @@ export const getChatCompletionStream = async (
     'Content-Type': 'application/json',
   };
   if (apiKey) headers.Authorization = `Bearer ${apiKey}`;
+
+  const authData = useStore.getState().authData;
+
+  if(authData) {
+    headers['address'] = authData.address;
+    headers['message'] = authData.message;
+    headers['signature'] = authData.signature;
+  }
 
   const response = await fetch(endpoint, {
     method: 'POST',

@@ -12,7 +12,9 @@ const PopupModal = ({
   handleClose,
   cancelButton = true,
   children,
+  confirmText
 }: {
+  confirmText?: string
   title?: string;
   message?: string;
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -64,7 +66,7 @@ const PopupModal = ({
                   className='btn btn-primary'
                   onClick={handleConfirm}
                 >
-                  {t('confirm')}
+                  {confirmText || t('confirm')}
                 </button>
               )}
               {cancelButton && (
@@ -81,7 +83,6 @@ const PopupModal = ({
         </div>
         <div
           className='bg-gray-800/90 absolute top-0 left-0 h-full w-full z-[-1]'
-          onClick={_handleClose}
         />
       </div>,
       modalRoot

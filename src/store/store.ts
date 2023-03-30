@@ -50,6 +50,7 @@ const useStore = create<StoreState>()(
         chats: state.chats,
         currentChatIndex: state.currentChatIndex,
         apiKey: state.apiKey,
+        authData: state.authData,
         apiEndpoint: state.apiEndpoint,
         theme: state.theme,
         autoTitle: state.autoTitle,
