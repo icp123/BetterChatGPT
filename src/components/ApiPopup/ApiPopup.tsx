@@ -49,6 +49,7 @@ const ApiPopup = () => {
       handleConfirm={handleConfirm}
       setIsModalOpen={setIsModalOpen}
       cancelButton={false}
+      close={false}
       confirmText={'Login'}
     >
       <div className='p-10 border-b border-gray-200 dark:border-gray-600'>
