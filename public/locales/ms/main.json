@@ -22,6 +22,8 @@
   "lightMode": "Mod Terang",
   "darkMode": "Mod Gelap",
   "setting": "Tetapan",
+  "logout": "Logout",
+  "logoutWarning": "You will Logout",
   "image": "Imej",
   "autoTitle": "Jana tajuk secara automatik",
   "prompt": "Arahan",

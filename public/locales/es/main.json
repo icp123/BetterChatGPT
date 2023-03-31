@@ -22,6 +22,8 @@
   "lightMode": "Modo claro",
   "darkMode": "Modo oscuro",
   "setting": "Ajustes",
+  "logout": "Logout",
+  "logoutWarning": "You will Logout",
   "image": "Imagen",
   "autoTitle": "Generar automáticamente el título de la conversación.",
   "prompt": "Prompt",

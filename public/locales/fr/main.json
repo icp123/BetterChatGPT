@@ -22,6 +22,8 @@
   "lightMode": "Mode clair",
   "darkMode": "Mode sombre",
   "setting": "Paramètres",
+  "logout": "Se déconnecter",
+  "logoutWarning": "You will Logout",
   "image": "Image",
   "autoTitle": "Générer le titre automatiquement",
   "prompt": "Incitation",

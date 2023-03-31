@@ -22,6 +22,8 @@
   "lightMode": "Lys Modus",
   "darkMode": "Mørk Modus",
   "setting": "Innstillinger",
+  "logout": "Logout",
+  "logoutWarning": "You will Logout",
   "image": "Bilde",
   "autoTitle": "Auto generer tittel",
   "prompt": "Oppgave",

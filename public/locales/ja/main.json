@@ -22,6 +22,8 @@
   "lightMode": "ライトモード",
   "darkMode": "ダークモード",
   "setting": "設定",
+  "logout": "Logout",
+  "logoutWarning": "You will Logout",
   "image": "画像",
   "autoTitle": "タイトルを自動生成",
   "prompt": "プロンプト",
