@@ -2,6 +2,7 @@ import React from 'react';
 import { Role } from '@type/chat';
 import SettingIcon from '@icon/SettingIcon';
 import PersonIcon from '@icon/PersonIcon';
+import OneIcon from '@icon/OneIcon'
 
 const Avatar = React.memo(({ role }: { role: Role }) => {
   return (
@@ -14,14 +15,25 @@ const Avatar = React.memo(({ role }: { role: Role }) => {
 });
 
 const UserAvatar = () => {
-  return (
-    <div
-      className='relative h-[30px] w-[30px] p-1 rounded-sm text-white flex items-center justify-center'
-      style={{ backgroundColor: 'rgb(200, 70, 70)' }}
-    >
-      <PersonIcon />
-    </div>
-  );
+    const info = localStorage.getItem('userInfo');
+    if (info) {
+        return (
+            <div
+                className='relative h-[30px] w-[30px] rounded-sm text-white flex items-center justify-center'
+            >
+                <OneIcon />
+            </div>
+        );
+    } else {
+        return (
+            <div
+                className='relative h-[30px] w-[30px] p-1 rounded-sm text-white flex items-center justify-center'
+                style={{ backgroundColor: 'rgb(200, 70, 70)' }}
+            >
+                <PersonIcon />
+            </div>
+        );
+    }
 };
 
 const AssistantAvatar = () => {
