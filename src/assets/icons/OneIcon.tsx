@@ -1,11 +1,11 @@
 import React from 'react';
 
 const OneIcon = () => {
-    const info = localStorage.getItem('userInfo');
-    if (info) {
-        var obj = JSON.parse(info);
+    const info_str = localStorage.getItem('userInfo');
+    if (info_str) {
+        var info = JSON.parse(info_str);
         return (
-            <img src={obj.avatar}></img>
+            <img src={info.avatar}></img>
         );
     }
     return (

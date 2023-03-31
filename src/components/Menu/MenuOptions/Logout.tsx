@@ -8,6 +8,7 @@ const Logout = () => {
     const { t } = useTranslation();
 
     const setAuthData = useStore((state) => state.setAuthData);
+    const getAuthData = useStore((state) => state.authData);
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
     const handleConfirm = () => {
@@ -15,6 +16,11 @@ const Logout = () => {
         setAuthData({ address: '', message: '', signature: '' });
         location.reload()
     };
+
+    var addr = "";
+    if (getAuthData?.address) {
+        var addr = ": " + getAuthData?.address.substring(0, 5) + '...' + getAuthData?.address.substring(38)
+    }
 
     return (
         <>
@@ -24,7 +30,7 @@ const Logout = () => {
                 }}
             >
                 <LogoutIcon />
-                {t('logout')}
+                {t('logout')} {addr}
             </a>
             {isModalOpen && (
                 <PopupModal
