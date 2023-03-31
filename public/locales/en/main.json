@@ -22,6 +22,8 @@
   "lightMode": "Light Mode",
   "darkMode": "Dark Mode",
   "setting": "Settings",
+  "logout": "Logout",
+  "logoutWarning": "You will Logout",
   "image": "Image",
   "autoTitle": "Auto generate title",
   "prompt": "Prompt",

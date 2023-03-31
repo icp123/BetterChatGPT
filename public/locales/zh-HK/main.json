@@ -22,6 +22,8 @@
   "lightMode": "亮色模式",
   "darkMode": "黑暗模式",
   "setting": "設定",
+  "logout": "登出",
+  "logoutWarning": "您將註銷",
   "image": "圖片",
   "autoTitle": "自動生成標題",
   "prompt": "Prompt",

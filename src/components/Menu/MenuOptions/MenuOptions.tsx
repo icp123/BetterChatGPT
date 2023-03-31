@@ -4,6 +4,7 @@ import useStore from '@store/store';
 import ClearConversation from './ClearConversation';
 import Api from './Api';
 import Me from './Me';
+import Logout from './Logout';
 import AboutMenu from '@components/AboutMenu';
 import ImportExportChat from '@components/ImportExportChat';
 import SettingsMenu from '@components/SettingsMenu';
@@ -25,6 +26,7 @@ const MenuOptions = () => {
         <Api />
         <SettingsMenu />
         {/* <Me /> */}
+        <Logout />
       </div>
     </>
   );
